@@ -21,3 +21,12 @@ app.put('/', (req, res) => {
 app.get('/', (req, res) => {
     res.send('Got a DELETE request');
 });
+
+app.get('/tarefas', (req, res) => {
+      const tarefas = [
+        { id: 1, nome: 'Fazer compras' },
+        { id: 2, nome: 'Estudar para a prova' },
+        // ...
+      ];
+     res.json(tarefas);
+    }); 

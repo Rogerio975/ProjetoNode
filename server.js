@@ -7,7 +7,7 @@ app.listen(port, () => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello Great World!');
 });
 
 app.post('/', (req, res) => {

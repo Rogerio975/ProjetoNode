@@ -26,6 +26,8 @@ app.get('/tarefas', (req, res) => {
       const tarefas = [
         { id: 1, nome: 'Fazer compras' },
         { id: 2, nome: 'Estudar para a prova' },
+        { id: 3, nome: 'Limpar a casa' },
+        { id: 4, nome: 'Preparar o jantar' },
         // ...
       ];
      res.json(tarefas);

@@ -40,23 +40,3 @@ app.get('/usuarios', async (req, res) => {
     res.status(500).json({ mensagem: 'Erro ao buscar usuários' });
   }
 });
-
-const criarJoao = async () => {
-  try {
-    const joao = new Usuario({
-      nome: "João Silva",
-      email: "joao.silva@email.com"
-      // O MongoDB salvará como Date, que você pode formatar na exibição
-    });
-
-    await joao.save();
-    console.log('Usuário João Silva criado com sucesso!');
-    
-    // Para exibir no formato de Salvador ao consultar:
-    console.log("Horário de Salvador:", joao.criadoEm.toLocaleString("pt-BR", {
-      timeZone: "America/Bahia"
-    }));
-  } catch (error) {
-    console.error("Erro ao criar:", error.message);
-  }
-};
